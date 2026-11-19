@@ -34,9 +34,6 @@ markdownlint:
 # Run the git hooks on staged files
 prek:
     uv run prek
-# Remove non-release default labels and sync the release labels on GitHub
-set-github-labels:
-    ./scripts/sync-labels.sh
 # Install Homebrew tools and sync the project
 setup:
     brew bundle install
