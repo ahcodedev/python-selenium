@@ -12,12 +12,6 @@ ci-lint:
     uv run ruff format --check .
     uv run codespell
     uv run actionlint .github/workflows/*.yml
-# Build the docs in strict mode (output in site/)
-docs-build:
-    uv run zensical build --strict
-# Serve the docs locally with live reload
-docs-serve:
-    uv run zensical serve
 # Scan staged changes for secrets
 git-leaks:
     gitleaks git --pre-commit --staged --redact

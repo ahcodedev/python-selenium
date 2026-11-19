@@ -34,8 +34,6 @@ manage project configuration and commands
 * `just test` - run unit tests
 * `just audit` - check dependencies for known vulnerabilities with pip-audit
 * `just markdownlint` - lint Markdown files with markdownlint-cli2
-* `just docs-build` - build the docs site with Zensical (strict mode, output in `site/`)
-* `just docs-serve` - serve the docs locally with live reload
 * `just prek` - run pre-commit hooks via prek
 * `just git-leaks` - scan staged changes for secrets with gitleaks
 * `just zizmor` - audit GitHub Actions workflows for security issues
@@ -45,7 +43,7 @@ manage project configuration and commands
 
 | Workflow              | Runs on                 | Purpose                                      |
 | --------------------- | ----------------------- | -------------------------------------------- |
-| `python.yml`          | push / PR to `main`     | lint, unit tests, docs build, markdownlint   |
+| `python.yml`          | push / PR to `main`     | lint, unit tests, markdownlint               |
 | `security.yml`        | push to `main`, all PRs | zizmor, gitleaks, pip-audit dependency audit |
 
 * GitHub Actions are pinned to full commit SHAs, with the version in a trailing comment

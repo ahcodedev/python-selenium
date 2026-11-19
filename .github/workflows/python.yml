@@ -32,9 +32,6 @@ jobs:
     - name: Unit tests
       run: |
         just test
-    - name: Docs build
-      run: |
-        just docs-build
   markdownlint:
     runs-on: ubuntu-slim
     permissions:

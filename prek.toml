@@ -33,14 +33,6 @@ hooks = [
         pass_filenames = false
     },
     {
-        id = "docs-build",
-        name = "docs build",
-        language = "system",
-        entry = "just docs-build",
-        files = "^(docs/|src/|zensical\\.toml$)",
-        pass_filenames = false
-    },
-    {
         id = "markdownlint",
         name = "markdownlint",
         language = "system",

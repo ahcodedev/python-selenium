@@ -19,13 +19,8 @@ dev = [
     "ruff>=0.17.3",
     "ty>=0.0.96",
 ]
-docs = [
-    "mkdocstrings[python]>=1.0.8",
-    "zensical>=0.1.0",
-]
 
 [tool.codespell]
-skip = "./site"  # Built docs output
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
