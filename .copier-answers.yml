@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.7.1
+_commit: v0.7.3
 _src_path: gh:ahcodedev/python-project-template
 description: Selenium automation example in python
 github_repo: ahcodedev/python-selenium
