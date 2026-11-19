@@ -18,6 +18,6 @@ class MitLicensePage(BasePage):
     def license_text_displayed(self) -> bool:
         return "MIT License" in self.find(self.LICENSE_ID).text
 
-    def open(self) -> "MitLicensePage":
+    def open(self) -> MitLicensePage:
         self.get(f"{BASE_URL}/licenses/mit/")
         return self

@@ -7,19 +7,19 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     cooldown:
       default-days: 7
     labels: ["dependencies"]
     groups:
       github-actions:
-        patterns: ["*"]
+        update-types: ["minor", "patch"]
 
   # Python dependencies in pyproject.toml / uv.lock
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     cooldown:
       default-days: 7
     labels: ["dependencies"]
@@ -31,7 +31,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "/.devcontainer"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     cooldown:
       default-days: 7
     labels: ["dependencies"]
@@ -40,7 +40,7 @@ updates:
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     cooldown:
       default-days: 7
     labels: ["dependencies"]

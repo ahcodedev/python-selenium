@@ -22,6 +22,6 @@ class HomePage(BasePage):
         self.find(self.MIT_LICENSE_LINK_TEXT).click()
         return MitLicensePage(self.driver)
 
-    def open(self) -> "HomePage":
+    def open(self) -> HomePage:
         self.get(BASE_URL)
         return self

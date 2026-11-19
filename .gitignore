@@ -1,26 +1,32 @@
-# Byte-compiled files
+# Python
 __pycache__/
 *.py[cod]
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments and environment files
+.venv/
+.env*
+
+# Test and tool caches
+.coverage
+.coverage.*
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+coverage.xml
 
 # OS
 .DS_Store
 
-# Test / coverage reports
-.coverage
-.coverage.*
-htmlcov/
-.pytest_cache/
-
-# Environments
-.env
-.venv
-
-# Ruff
-.ruff_cache
-
-# Claude
-.claude/*.local.*
+# Claude (committing Claude files is opt-in)
+.claude/
+.claude/settings.local.json
 CLAUDE.md
+CLAUDE.md.example
 
 # Dev Container
 .devcontainer/devcontainer-lock.json
