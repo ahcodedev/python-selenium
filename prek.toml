@@ -1,0 +1,60 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "trailing-whitespace" },
+    { id = "end-of-file-fixer" },
+    { id = "check-added-large-files" }
+]
+
+[[repos]]
+repo = "local"
+hooks = [
+    {
+        id = "ci-lint",
+        name = "lint codebase",
+        language = "system",
+        entry = "just ci-lint",
+        pass_filenames = false
+    },
+    {
+        id = "unit-tests",
+        name = "unit tests",
+        language = "system",
+        entry = "just test",
+        pass_filenames = false
+    },
+    {
+        id = "spellcheck",
+        name = "spell check",
+        language = "system",
+        entry = "just spellcheck",
+        pass_filenames = false
+    },
+    {
+        id = "markdownlint",
+        name = "markdownlint",
+        language = "system",
+        entry = "just markdownlint",
+        files = "\\.md$",
+        pass_filenames = false
+    },
+    {
+        id = "pip-audit",
+        name = "pip-audit",
+        language = "system",
+        entry = "just audit",
+        files = "^(pyproject\\.toml|uv\\.lock)$",
+        pass_filenames = false
+    },
+    {
+        id = "betterleaks",
+        name = "betterleaks",
+        language = "system",
+        entry = "just betterleaks",
+        pass_filenames = false
+    }
+]
